@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposta de marca · Agência Orca</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0A0A0A;
+    --muted: #52525B;
+    --muted-dark: #A1A1AA;
+    --bg: #FFFFFF;
+    --soft: #F4F5F7;
+    --line: #E4E4E7;
+    --wa: #1DA851;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.55 Nunito, system-ui, sans-serif; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 32px 16px 64px; }
+  header.top { display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: end; justify-content: space-between; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+  header.top img { height: 44px; display: block; }
+  h1 { font-weight: 900; font-size: clamp(28px, 4vw, 40px); line-height: 1.1; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0; }
+  section { padding: 40px 0; border-bottom: 1px solid var(--line); }
+  h2 { font-weight: 900; font-size: 26px; line-height: 1.2; margin: 0 0 6px; }
+  .note { color: var(--muted); margin: 0 0 24px; max-width: 70ch; }
+  .rec { background: var(--soft); border-radius: 14px; padding: 16px 18px; margin-top: 20px; max-width: 80ch; }
+  .rec strong { font-weight: 800; }
+  .grid { display: grid; gap: 16px; }
+  @media (min-width: 760px) { .g2 { grid-template-columns: 1fr 1fr; } .g3 { grid-template-columns: 1.1fr 1fr 1fr; } }
+  .tile { border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: grid; place-items: center; min-height: 180px; position: relative; }
+  .tile.dark { background: var(--ink); border-color: var(--ink); }
+  .tile.soft { background: var(--soft); border-color: var(--soft); }
+  .tile .cap { position: absolute; left: 14px; top: 10px; font-size: 13px; font-weight: 700; color: var(--muted); }
+  .tile.dark .cap { color: var(--muted-dark); }
+  .tile img { max-width: 100%; height: auto; display: block; }
+  .sizes { display: flex; flex-wrap: wrap; align-items: end; gap: 20px; }
+  .sizes figure { margin: 0; text-align: center; font-size: 12px; color: var(--muted); }
+  .sizes figure img { margin: 0 auto 6px; }
+  .tab { display: flex; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--line); border-radius: 10px 10px 0 0; padding: 8px 12px; font-size: 13px; width: 220px; }
+  .tab.dark { background: #2B2B30; border-color: #2B2B30; color: #E4E4E7; }
+  .tab img { width: 16px; height: 16px; }
+
+  /* ---------- Opções de cor ---------- */
+  .opt { border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
+  .opt-head { padding: 18px 20px 6px; }
+  .opt-head h3 { margin: 0; font-weight: 900; font-size: 22px; }
+  .opt-head p { margin: 2px 0 0; color: var(--muted); font-size: 15px; }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; padding: 12px 20px 18px; }
+  .sw { display: flex; align-items: center; gap: 8px; font-size: 13px; line-height: 1.25; }
+  .sw i { width: 34px; height: 34px; border-radius: 10px; border: 1px solid rgba(0,0,0,.08); flex: none; }
+  .sw b { display: block; font-weight: 800; }
+  .mock { position: relative; padding: 20px; background: #fff; border-top: 1px solid var(--line); }
+  .mock-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+  .mock-bar img { height: 26px; }
+  .eyebrow { font-size: 13px; font-weight: 700; color: var(--muted); margin: 0 0 6px; }
+  .mock h4 { font-weight: 900; font-size: clamp(24px, 3.2vw, 30px); line-height: 1.12; margin: 0 0 12px; letter-spacing: -0.01em; max-width: 18ch; }
+  .mock p { margin: 0 0 16px; color: var(--muted); font-size: 15px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 22px; border-radius: 999px; font: 800 16px/1.15 Nunito, system-ui, sans-serif; text-align: center; text-decoration: none; border: 2px solid transparent; cursor: pointer; }
+  @media (max-width: 520px) { .btns .btn { width: 100%; } }
+  .mock.has-fab { padding-bottom: 88px; }
+  .btn svg { width: 20px; height: 20px; flex: none; }
+  .btn-sm { min-height: 40px; padding: 0 16px; font-size: 14px; }
+  .btn-primary { background: var(--accent); color: var(--on-accent); }
+  .btn-primary:hover { background: var(--accent-hover); }
+  .btn-secondary { background: transparent; color: var(--ink); border-color: var(--ink); }
+  .btn-secondary:hover { background: var(--ink); color: #fff; }
+  .mock .link { color: var(--link); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+  .fab { position: absolute; right: 16px; bottom: 16px; width: 56px; height: 56px; border-radius: 50%; background: var(--wa); display: grid; place-items: center; box-shadow: 0 6px 18px rgba(0,0,0,.18); }
+  .fab svg { width: 30px; height: 30px; fill: #fff; }
+  .mock.dark { background: var(--ink); color: #fff; border-top-color: var(--ink); }
+  .mock.dark h4 { color: #fff; }
+  .mock.dark p { color: var(--muted-dark); }
+  .mock.dark .btn-secondary { color: #fff; border-color: #fff; }
+  .mock.dark .btn-secondary:hover { background: #fff; color: var(--ink); }
+  .mock.dark .link { color: var(--link-dark); }
+  .checks { list-style: none; margin: 0; padding: 14px 20px 18px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); display: grid; gap: 4px; }
+  .checks li::before { content: "✓ "; color: #15803D; font-weight: 900; }
+
+  .opt-a { --accent: #1554E8; --accent-hover: #0F44C2; --on-accent: #FFFFFF; --link: #1554E8; --link-dark: #7DA8FF; }
+
+  /* ---------- Fonte ---------- */
+  .type { display: grid; gap: 24px; }
+  @media (min-width: 760px) { .type { grid-template-columns: 220px 1fr; align-items: start; } }
+  .aa { font-weight: 900; font-size: 120px; line-height: 1; letter-spacing: -0.02em; }
+  .weights { display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--muted); font-size: 15px; margin-top: 8px; }
+  .spec h3 { font-weight: 900; font-size: clamp(28px, 4vw, 40px); line-height: 1.1; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .spec h5 { font-weight: 800; font-size: 22px; margin: 18px 0 6px; }
+  .spec p { margin: 0 0 8px; max-width: 62ch; }
+  .neutral { display: flex; flex-wrap: wrap; gap: 14px; }
+  footer { padding-top: 28px; color: var(--muted); font-size: 14px; }
+  footer code { font-size: 13px; background: var(--soft); padding: 1px 6px; border-radius: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div>
+      <h1>Proposta de marca</h1>
+      <p class="sub">Agência Orca · cor escolhida: Azul-oceano · nada disso está aplicado ao site ainda</p>
+    </div>
+    <img src="orca-logo-horizontal.svg" alt="Agência Orca">
+  </header>
+
+  <section>
+    <h2>Logo</h2>
+    <p class="note">O desenho é o seu, agora em vetor e no mesmo azul dos botões (#1554E8). No fundo escuro, o logo fica branco, porque azul sobre preto fica apagado (contraste de 3,3 : 1). A palavra "orca" é a fonte Nunito Black transformada em desenho, então aparece igual em qualquer computador.</p>
+    <div class="grid g3">
+      <div class="tile"><span class="cap">Símbolo</span><img src="orca-simbolo.svg" alt="Símbolo da orca" style="width:72%"></div>
+      <div class="tile"><span class="cap">Símbolo + nome</span><img src="orca-logo-horizontal.svg" alt="Logo horizontal" style="width:88%"></div>
+      <div class="tile dark"><span class="cap">Fundo escuro</span><img src="orca-logo-horizontal-branco.svg" alt="Logo horizontal branco" style="width:88%"></div>
+    </div>
+    <div class="grid g2" style="margin-top:16px">
+      <div class="tile"><span class="cap">Alternativa: nome em preto</span><img src="orca-logo-horizontal-bicolor.svg" alt="Logo com símbolo azul e nome preto" style="width:70%;margin-top:14px"></div>
+      <div class="tile"><span class="cap">Uma cor só: impressão, carimbo, documento</span><img src="orca-logo-horizontal-preto.svg" alt="Logo preto" style="width:70%;margin-top:14px"></div>
+    </div>
+    <div class="tile soft" style="margin-top:16px;min-height:0;place-items:start">
+      <div class="sizes">
+        <figure><img src="orca-logo-horizontal.svg" alt="" style="height:40px;width:auto">Topo no computador (40 px)</figure>
+        <figure><img src="orca-logo-horizontal.svg" alt="" style="height:32px;width:auto">Topo no celular (32 px)</figure>
+        <figure><img src="orca-logo-horizontal.svg" alt="" style="height:24px;width:auto">Rodapé (24 px)</figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ícone do site</h2>
+    <p class="note">Só o símbolo, em azul. Quando o navegador está no tema escuro, ele troca sozinho para um azul mais claro (#7DA8FF), que aparece bem no fundo escuro.</p>
+    <div class="grid g2">
+      <div class="tile" style="place-items:start;min-height:0">
+        <div class="sizes">
+          <figure><img src="orca-simbolo.svg" alt="" width="16" height="16">16 px</figure>
+          <figure><img src="orca-simbolo.svg" alt="" width="32" height="32">32 px</figure>
+          <figure><img src="orca-simbolo.svg" alt="" width="48" height="48">48 px</figure>
+          <figure><img src="orca-simbolo.svg" alt="" width="96" height="96">96 px</figure>
+        </div>
+      </div>
+      <div class="tile soft" style="place-items:start;min-height:0;gap:10px">
+        <div class="tab"><img src="orca-simbolo.svg" alt="">Agência Orca | Site, loja…</div>
+        <div class="tab dark"><img src="orca-simbolo-azul-claro.svg" alt="" style="object-fit:contain">Agência Orca | Site, loja…</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Orca no notebook</h2>
+    <p class="note">A orca digitando, com a nadadeira no teclado e olhando para a tela.</p>
+    <div class="grid g2">
+      <div class="tile"><img src="orca-notebook.svg" alt="Orca usando um notebook" style="width:86%"></div>
+      <div class="tile dark"><img src="orca-notebook-branco.svg" alt="Orca usando um notebook, versão branca" style="width:86%"></div>
+    </div>
+    <p class="rec"><strong>Minha recomendação:</strong> usar como ilustração (topo do site, página de obrigado, página de erro e destaques do Instagram), não no lugar do logo. No ícone do site e no topo, em tamanho pequeno, o notebook vira ruído e a orca perde força. O logo continua sendo a orca sozinha.</p>
+  </section>
+
+  <section>
+    <h2>Cor: Azul-oceano</h2>
+    <p class="note">O azul aparece no logo, nos botões e nos links. O resto do site continua no preto e branco da orca. O botão flutuante do WhatsApp fica no verde do WhatsApp, que todo mundo reconhece.</p>
+
+    <div class="grid" style="max-width:560px">
+      <article class="opt opt-a">
+        <div class="opt-head">
+          <h3>Azul-oceano · escolhida</h3>
+          <p>Calmo e confiável. Combina com o mar da orca e não briga com o verde do WhatsApp.</p>
+        </div>
+        <div class="swatches">
+          <div class="sw"><i style="background:#1554E8"></i><span><b>#1554E8</b>logo, botões e links</span></div>
+          <div class="sw"><i style="background:#0F44C2"></i><span><b>#0F44C2</b>ao passar o mouse</span></div>
+          <div class="sw"><i style="background:#7DA8FF"></i><span><b>#7DA8FF</b>link no fundo preto</span></div>
+        </div>
+        <div class="mock has-fab">
+          <div class="mock-bar"><img src="orca-logo-horizontal.svg" alt="Agência Orca"><a class="btn btn-sm btn-primary" href="#">WhatsApp</a></div>
+          <p class="eyebrow">Porto Alegre/RS · Atendimento online para todo o Brasil</p>
+          <h4>Do anúncio ao cliente no seu WhatsApp, com uma equipe só.</h4>
+          <div class="btns">
+            <a class="btn btn-primary" href="#"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><use href="#wa"/></svg>Falar no WhatsApp</a>
+            <a class="btn btn-secondary" href="#">Quero meu diagnóstico gratuito</a>
+          </div>
+          <p>Ou <a class="link" href="#">teste a loja de demonstração</a></p>
+          <span class="fab" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#wa"/></svg></span>
+        </div>
+        <div class="mock dark">
+          <h4>Quer saber o que melhorar primeiro?</h4>
+          <div class="btns">
+            <a class="btn btn-primary" href="#">Quero meu diagnóstico gratuito</a>
+            <a class="btn btn-secondary" href="#">Falar no WhatsApp</a>
+          </div>
+          <p><a class="link" href="#">Política de privacidade</a></p>
+        </div>
+        <ul class="checks">
+          <li>Texto branco no botão: 6,1 : 1 (AA pede 4,5)</li>
+          <li>Logo e link no fundo branco: 6,1 : 1</li>
+          <li>Link no fundo preto: 8,4 : 1</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <p class="note" style="margin-top:14px">Botão flutuante do WhatsApp: verde #1DA851, um pouco mais escuro que o oficial (#25D366), para o ícone branco passar no contraste (3,1 : 1).</p>
+  </section>
+
+  <section>
+    <h2>Fonte: Nunito</h2>
+    <p class="note">Sem serifa, com pontas arredondadas que conversam com as curvas da orca. Gratuita (Google Fonts). No site, ela fica hospedada no próprio servidor, num arquivo só, para não pesar.</p>
+    <div class="type">
+      <div>
+        <div class="aa">Aa</div>
+        <div class="weights"><span style="font-weight:400">Regular</span><span style="font-weight:600">Semi</span><span style="font-weight:800">Extra</span><span style="font-weight:900">Black</span></div>
+      </div>
+      <div class="spec">
+        <h3>Do anúncio ao cliente no seu WhatsApp, com uma equipe só.</h3>
+        <h5>Você vende pelo WhatsApp e se perde nos pedidos.</h5>
+        <p>Áudio, foto, lista pela metade. Alguém digita tudo de novo, erra a quantidade, e o pedido de ontem some no meio da conversa.</p>
+        <p style="color:var(--muted);font-size:15px">Títulos em Black (900), subtítulos em Extra (800), texto em Regular (400), botões em Extra (800).</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Neutros</h2>
+    <p class="note">O preto e branco da orca, no resto do site.</p>
+    <div class="neutral">
+      <div class="sw"><i style="background:#0A0A0A"></i><span><b>#0A0A0A</b>preto da orca, títulos e texto</span></div>
+      <div class="sw"><i style="background:#52525B"></i><span><b>#52525B</b>texto de apoio (7,7 : 1)</span></div>
+      <div class="sw"><i style="background:#F4F5F7"></i><span><b>#F4F5F7</b>fundo de seção</span></div>
+      <div class="sw"><i style="background:#E4E4E7"></i><span><b>#E4E4E7</b>linhas e bordas</span></div>
+      <div class="sw"><i style="background:#FFFFFF"></i><span><b>#FFFFFF</b>fundo</span></div>
+    </div>
+  </section>
+
+  <footer>
+    Arquivos nesta pasta: azul (principal) <code>orca-simbolo.svg</code> <code>orca-logo-horizontal.svg</code> <code>orca-notebook.svg</code> <code>favicon.svg</code> · fundo escuro <code>orca-simbolo-branco.svg</code> <code>orca-logo-horizontal-branco.svg</code> <code>orca-notebook-branco.svg</code> <code>orca-simbolo-azul-claro.svg</code> · uma cor só <code>orca-simbolo-preto.svg</code> <code>orca-logo-horizontal-preto.svg</code> <code>orca-notebook-preto.svg</code> · alternativa <code>orca-logo-horizontal-bicolor.svg</code>
+  </footer>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></symbol>
+</svg>
+</body>
+</html>
